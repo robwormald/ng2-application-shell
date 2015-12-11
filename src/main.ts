@@ -8,5 +8,5 @@ const FIREBASE_URL = 'https://ng2-forum-demo.firebaseio.com';
 
 import {App} from './app/app';
 
-bootstrap(App,[Nav, AuthService, Backend, provide(BackendConfig, {useValue: {url: FIREBASE_URL }})]);
+bootstrap(App,[AuthService, Backend, provide(BackendConfig, {useValue: {url: FIREBASE_URL }})]);
 
