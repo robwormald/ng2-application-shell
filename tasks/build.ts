@@ -6,7 +6,7 @@ const minifyCSS = require('gulp-minify-css');
 
 export const build = (gulp, config) => {
 	
-	gulp.task('default', ['compile:sass','compile:app'], () => {
+	gulp.task('default', ['compile:sass','compile:app','copy:dev'], () => {
 		
 		gulp.src(config.index)
   		.pipe(inline({
