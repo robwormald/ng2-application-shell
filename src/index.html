@@ -12,30 +12,32 @@
 	<link rel="icon" href="./images/chrome-touch-icon-192x192.png" sizes="192x192" type="image/png">
 	<link rel="stylesheet" href="/css/core.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500,400italic">
-	<script src="./app.js" async></script>
+
 </head>
 
 <body>
-	<header class="header">
-		<img role="tab" class="header__menu js-toggle-menu" src="/images/ic_menu_24px.svg" alt="toggle_nav"></img>
+	<app>
+		<header class="header">
+			<img role="tab" class="header__menu js-toggle-menu" src="/images/ic_menu_24px.svg" alt="toggle_nav"></img>
 
-		<h1 class="header__title">Ng2 Shell</h1>
-	</header>
-	<main class="main js-global-main" aria-role="main">
-		<app>
+			<h1 class="header__title">Ng2 App Shell</h1>
+		</header>
+		<main class="main js-global-main" aria-role="main">
 			<div class="loader js-global-loader">
 				<svg viewBox="0 0 32 32" width="32" height="32">
-				<circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-			</svg>
-	</div>
-		</app>
+					<circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+				</svg>
+			</div>
+	</app>
 	</main>
 
 	<aside class="toast-view js-toast-view"></aside>
 
-	<!-- Loading Dialog For use by Activities -->
-	
-	
+	<script src="angular2-polyfills.js"></script>
+	<script src="./system.js"></script>
+	<script src="./app.js"></script>
+	<script src="./app-shell.js"></script>
+
 </body>
 
 </html>
