@@ -10,7 +10,7 @@ export const compile = (gulp, config) => {
 		
 		return builder.loadConfig(config.system.configFile)
 		  .then(() => {
-				return builder.buildStatic('app', 'dist/app.js', {minify: true})
+				return builder.bundle('app', 'dist/app.js')
 			})
 	});
 }
