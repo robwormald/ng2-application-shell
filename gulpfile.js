@@ -5,7 +5,12 @@ var tsconfig = require('./tsconfig.json');
 var config = {
 	index: 'src/index.html',
 	css:['src/**/*.scss'],
-	staticFiles: ['src/**/*', '!src/**/*.ts'],
+	staticFiles: [
+		'src/**/*',
+		'!src/**/*.ts',
+		'node_modules/systemjs/dist/system.js',
+		'node_modules/angular2/bundles/angular2-polyfills.js'
+		],
 	dist: './dist',
 	system: {
 		configFile: 'system.config.js'
