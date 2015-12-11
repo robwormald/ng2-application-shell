@@ -1,0 +1,52 @@
+.header {
+  width: 100%;
+  height: 56px;
+  color: #FFF;
+  background: $primary;
+  position: fixed;
+  font-size: 20px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 2px 9px 1px rgba(0, 0, 0, 0.12),
+    0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  padding: 16px 16px 0 16px;
+  will-change: transform;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: center;
+  transition: transform 0.233s cubic-bezier(0,0,0.21,1) 0.1s;
+}
+
+.header--collapsed {
+  transition: transform 0.233s cubic-bezier(0,0,0.21,1) 0.13s;
+  transform: translateY(-56px);
+}
+
+.header__menu {
+  background: url(/images/ic_menu_24px.svg) center center no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  text-indent: -30000px;
+  overflow: hidden;
+  opacity: 0.54;
+  transition: opacity 0.333s cubic-bezier(0,0,0.21,1);
+  border: none;
+  outline: none;
+}
+
+.header__menu:focus,
+.header__menu:hover {
+  opacity: 1;
+  border: 1px solid white;
+}
+
+.header__title {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+  flex: 1;
+}

@@ -1,0 +1,63 @@
+.header {
+  z-index: 2;
+}
+
+.main {
+  z-index: 0;
+}
+
+.new-appshelling-btn {
+  z-index: 3;
+}
+
+.view-underpanel {
+  z-index: 4;
+}
+
+.details-view {
+  z-index: 6;
+}
+
+.edit-view__circular-reveal-container {
+  z-index: 10;
+}
+
+.appshell-view {
+  z-index: 5;
+}
+
+.details-view__box-reveal {
+  z-index: 5;
+}
+
+.details-view__panel {
+  z-index: 6;
+}
+
+.details-view__playback {
+  z-index: 1;
+}
+
+.edit-view__panel {
+  z-index: 7;
+}
+
+body:after {
+  z-index: 100;
+}
+
+.side-nav {
+  z-index: 200;
+}
+
+.dialog-view {
+  z-index: 250;
+}
+
+.toast-view {
+  z-index: 300;
+}
+
+.loader {
+  z-index: 400;
+}

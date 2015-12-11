@@ -1,0 +1,50 @@
+.main {
+  padding-top: 72px;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.superfail .main {
+  background: url(/images/superfail.svg) center center no-repeat;
+}
+
+.empty-set-cta {
+  color: $primary;
+  font-size: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $background;
+  opacity: 0;
+  will-change: opacity;
+  pointer-events: none;
+  transition: opacity 0.333s cubic-bezier(0,0,0.21,1);
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.empty-set-cta--visible {
+  opacity: 1;
+}
+
+@media (min-width: 600px) {
+  .main {
+    padding-top: 160px;
+  }
+}
+
+@media (min-width: 960px) {
+  .main__inner {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
