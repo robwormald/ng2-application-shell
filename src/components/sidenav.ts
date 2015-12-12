@@ -2,6 +2,7 @@ import {Component, Directive, Output, Input, EventEmitter, Renderer, ElementRef}
 import {App} from '../app/app';
 import {Nav} from '../services/Nav';
 import {ReplaySubject} from 'rxjs/subject/ReplaySubject';
+import {ROUTER_DIRECTIVES} from 'angular2/router';
 
 @Directive({
   selector: '[side-nav-content]',
@@ -39,7 +40,7 @@ class SideNavContent {
 
 @Component({
 	selector: 'side-nav',
-  directives: [SideNavContent],
+  directives: [SideNavContent, ROUTER_DIRECTIVES],
 	template: `
 	  <section class="side-nav js-side-nav" [class.side-nav--visible]="isVisible | async" (click)="nav.close()">
   	 <div side-nav-content class="side-nav__content js-side-nav-content" [open]="isVisible | async">
@@ -48,8 +49,8 @@ class SideNavContent {
       </div>
 
       <div class="side-nav__body">
-        <a role="tab" tabindex="0" class="side-nav__blog-post" href="/">Index</a>
-        <a role="tab" tabindex="0" class="side-nav__blog-post" href="/url-1">URL 1</a>
+        <a role="tab" tabindex="0" class="side-nav__blog-post" [routerLink]="['/Home']">Index</a>
+        <a role="tab" tabindex="0" class="side-nav__blog-post" [routerLink]="['/About']">About</a>
         <a role="tab" tabindex="0" class="side-nav__blog-post" href="/url-2">URL 2</a>
       </div>
 
