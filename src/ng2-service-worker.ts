@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import {Injector, Injectable, provide} from 'angular2/src/core/di';
 
 class SWLogger {
-	log(...args:any[]){
+	log(...args: any[]) {
 		console.log.apply(console, ['[service-worker]'].concat(args));
 	}
 }
@@ -15,34 +15,34 @@ const SW_EVENTS = {
 }
 
 class SWContext {
-	addEventListener(event, handler){}
+	addEventListener(event, handler) { }
 }
 
 
 @Injectable()
 class NgServiceWorker {
-	constructor(serviceWorkerContext:SWContext, private _logger:SWLogger){
+	constructor(serviceWorkerContext: SWContext, private _logger: SWLogger) {
 		serviceWorkerContext.addEventListener(SW_EVENTS.ACTIVATE, (ev) => this.onActivate(ev));
 		serviceWorkerContext.addEventListener(SW_EVENTS.INSTALL, (ev) => this.onInstall(ev));
 		serviceWorkerContext.addEventListener(SW_EVENTS.FETCH, (ev) => this.onFetch(ev));
 	}
 
-	bootstrap(){
+	bootstrap() {
 		this._logger.log('bootstrap')
 	}
 
-	onInstall(installEvent){
+	onInstall(installEvent) {
 		installEvent.waitUntil(this._onInstall());
 	}
 
-	private _onInstall(){
+	private _onInstall() {
 		return Promise.resolve('ready');
 	}
 
-	onActivate(activateEvent){
+	onActivate(activateEvent) {
 		this._logger.log('activate', activateEvent);
 	}
-	onFetch(fetchEvent){
+	onFetch(fetchEvent) {
 		this._logger.log('fetch', fetchEvent.request.url);
 	}
 }
