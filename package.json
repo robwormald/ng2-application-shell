@@ -22,6 +22,7 @@
     "gulp-inline": "^0.1.0",
     "gulp-minify-css": "^1.2.2",
     "gulp-sass": "^2.1.1",
+    "gulp-util": "^3.0.7",
     "systemjs": "^0.19.6",
     "systemjs-builder": "^0.14.11",
     "ts-node": "^0.5.4",
