@@ -6,6 +6,10 @@
   -webkit-overflow-scrolling: touch;
 }
 
+app {
+  overflow-y: auto;
+}
+
 .superfail .main {
   background: url(/images/superfail.svg) center center no-repeat;
 }
