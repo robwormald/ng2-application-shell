@@ -10,7 +10,7 @@ export class BackendConfig {
 
 @Injectable()
 export class Backend {
-	authState: ReplaySubject = new ReplaySubject(1);
+	authState: ReplaySubject<any> = new ReplaySubject(1);
 	ref: Firebase;
 	constructor(config: BackendConfig){
 		this.ref = new Firebase(config.url);
