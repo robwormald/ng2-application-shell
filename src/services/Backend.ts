@@ -1,6 +1,7 @@
 import Firebase from 'firebase';
 import {Injectable} from 'angular2/core';
-import {Observable, ReplaySubject, Subject} from 'rxjs/Rx';
+import {Observable} from 'rxjs/Observable';
+import {ReplaySubject} from 'rxjs/subject/ReplaySubject';
 
 export class BackendConfig {
 	url: string;

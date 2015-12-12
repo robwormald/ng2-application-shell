@@ -1,7 +1,7 @@
 import {Component, Directive, Output, Input, EventEmitter, Renderer, ElementRef} from 'angular2/core';
 import {App} from '../app/app';
 import {Nav} from '../services/Nav';
-import {ReplaySubject} from 'rxjs/Rx';
+import {ReplaySubject} from 'rxjs/subject/ReplaySubject';
 
 @Directive({
   selector: '[side-nav-content]',

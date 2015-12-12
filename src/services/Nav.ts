@@ -1,5 +1,5 @@
 import {Injectable} from 'angular2/core';
-import {Observable, ReplaySubject, Subject} from 'rxjs/Rx';
+import {ReplaySubject} from 'rxjs/subject/ReplaySubject';
 
 @Injectable()
 export class Nav {
