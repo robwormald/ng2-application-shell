@@ -22,6 +22,9 @@ System.config({
 			},
 			rxjs: {
 				defaultExtension: 'js'
+			},
+			'reflect-metadata': {
+				format: 'global'
 			}
 		}
 });
